@@ -6,123 +6,124 @@
     <title>Interactive Playlist Generator</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #cf04117a;
-            color: #ecf0f1;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background-color: #34495e;
-            padding: 20px;
-            text-align: center;
-        }
+header {
+    background-color: #001428;
+    padding: 20px;
+    text-align: center;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #2980b9;
-            padding: 10px;
-        }
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2980b9;
+    padding: 10px;
+}
 
-        nav a {
-            color: #ffffff;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 10px;
-            font-size: large;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    font-size: large;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-        nav a:hover {
-            background-color: #091d81;;
-        }
+nav a:hover {
+    background-color: #091d81;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-        h1, h2 {
-            color: #3498db;
-        }
+h1, h2 {
+    color: #3498db;
+}
 
-        label {
-            display: block;
-            margin: 10px 0;
-            color: #333;
-        }
+label {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+}
 
-        select {
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #000000;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            width: 100%;
-            background-color: #ecf0f1;
-            color: #000000;
-            font-weight: bold;
-        }
+select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #ecf0f1;
+    color: #000000;
+    font-weight: bold;
+}
 
-        button {
-            padding: 12px 24px;
-            font-size: 18px;
-            background-color: #091d81;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-weight: bold;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #091d81;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        button:hover {
-            background-color: #2980b9;
-        }
+button:hover {
+    background-color: #2980b9;
+}
 
-        #playlist-display, #about-me-section, #login-section {
-            text-align: center; 
-        }
+#playlist-display, #about-me-section, #login-section {
+    text-align: center;
+}
 
-        .song {
-            display: inline-block; 
-            text-align: left; 
-            margin: 10px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
+.song {
+    display: inline-block;
+    text-align: left;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
 
-        .song h3 {
-            color: #091d81;
-        }
+.song h3 {
+    color: #091d81;
+}
 
-        .song p {
-            color: #000000;
-        }
+.song p {
+    color: #000000;
+}
 
-        .section {
-            margin-top: 40px;
-        }
+.section {
+    margin-top: 40px;
+}
 
-        .section p {
-            color: #555;
-        }
-        #login-form {
+.section p {
+    color: #555;
+}
+
+#login-form {
     max-width: 300px;
     margin: 0 auto;
     background-color: #2980b9;
@@ -134,7 +135,7 @@
 #login-form label {
     display: block;
     margin-bottom: 8px;
-    color: #333;
+    color: #fff;
 }
 
 #login-form input {
@@ -162,12 +163,27 @@
 #login-form button:hover {
     background-color: #000000;
 }
+.song a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #1DB954; /* Spotify green color */
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
 
+    .song a:hover {
+        background-color: #25D366; /* Slightly darker green on hover */
+    }
     </style>
 </head>
 <body>
     <header>
-        <h1>Interactive Playlist Generator</h1>
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+</svg> Interactive Playlist Generator</h1>
     </header>
     
     <nav>
@@ -193,7 +209,7 @@
                     <option value="hiphop">Hip Hop</option>
                 </select>
 
-                <button onclick="generatePlaylist()" style="display: flex;">Generate Playlist</button>
+                <button onclick="generatePlaylist()" style="display: flex;">Generate Playlist </button>
             </div>
 
             <div id="playlist-display">
@@ -205,6 +221,8 @@
         <div class="container">
             <h2 style="color: #091d81;">About Me</h2><hr>
             <p style="font-weight: bold; color: #000000;">SHASHANK B S</p>
+            <p style="font-weight: bold; color: #000000;">SOMESH HK</p>
+            <p style="font-weight: bold; color: #000000;">JEEVAN LR</p>
         </div>
     </div>
 
@@ -225,44 +243,50 @@
     </div>
     
 
-    <script>
-        function generatePlaylist() {
-            var mood = document.getElementById('mood').value;
-            var genre = document.getElementById('genre').value;
-            var playlistContainer = document.getElementById('playlist-display');
-            
-            var playlist = [
-                { title: '▶️BADASS', artist: 'Anirudh ravichandar' },
-                { title: '▶️PARAVASHNADENU', artist: 'Sonu nigam' },
-                { title: '▶️NAA READY', artist: 'Anirudh' },
-            ];
+   <script>
+    function generatePlaylist() {
+        var mood = document.getElementById('mood').value;
+        var genre = document.getElementById('genre').value;
+        var playlistContainer = document.getElementById('playlist-display');
 
-            var playlistHTML = '<h2 style="color: black;">Your Custom Playlist:</h2>';
-            
+        var playlist = [
+            { title: 'BADASS', artist: 'Anirudh ravichandar', spotifyLink: generateSpotifyLink('Anirudh ravichandar BADASS') },
+            { title: 'PARAVASHNADENU', artist: 'Sonu nigam', spotifyLink: generateSpotifyLink('Sonu nigam PARAVASHNADENU') },
+            { title: 'NAA READY', artist: 'Anirudh', spotifyLink: generateSpotifyLink('Anirudh NAA READY') },
+        ];
 
-            if (playlist.length === 0) {
-                playlistHTML += '<p>No songs found for the selected criteria.</p>';
-            } else {
-                playlist.forEach(song => {
-                    playlistHTML += `
-                        <div class="song">
-                            <h3>${song.title}</h3>
-                            <p>${song.artist}</p>
-                        </div>
-                    `;
-                });
-            }
+        var playlistHTML = '<h2 style="color: black;">Your Custom Playlist:</h2>';
 
-            playlistContainer.innerHTML = playlistHTML;
+        if (playlist.length === 0) {
+            playlistHTML += '<p>No songs found for the selected criteria.</p>';
+        } else {
+            playlist.forEach(song => {
+                playlistHTML += `
+                    <div class="song">
+                        <h3>${song.title}</h3>
+                        <p>${song.artist}</p>
+                        <a href="${song.spotifyLink}" target="_blank">Listen on Spotify <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+</svg></a>
+                    </div>
+                `;
+            });
         }
 
-        function showSection(sectionId) {
-            document.getElementById('playlist-section').style.display = 'none';
-            document.getElementById('about-me-section').style.display = 'none';
-            document.getElementById('login-section').style.display = 'none';
-            document.getElementById(sectionId).style.display = 'block';
-        }
+        playlistContainer.innerHTML = playlistHTML;
+    }
 
-    </script>
+    function generateSpotifyLink(query) {
+        return `https://open.spotify.com/search/${encodeURIComponent(query)}`;
+    }
+
+    function showSection(sectionId) {
+        document.getElementById('playlist-section').style.display = 'none';
+        document.getElementById('about-me-section').style.display = 'none';
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
 </body>
 </html>
